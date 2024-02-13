@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Parcial1PlataformasPropietarias
 {
-    internal class CEmpresa 
+    internal class CEmpresa
     {
         private CEmpleado[] activos;
 
