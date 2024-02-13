@@ -20,7 +20,7 @@ namespace Parcial1PlataformasPropietarias
             salario = pSalario;
             departamento = pDepartamento;
         }
-
+            
         public double Salario { get { return salario; } set { salario = value; } }
         public double Isr { get { return ISR; } set { ISR = value; } }
 

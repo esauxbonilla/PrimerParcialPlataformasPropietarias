@@ -21,13 +21,14 @@ namespace Parcial1PlataformasPropietarias
                 miEmpleado.MuestraInformacion();
             }
 
-            //Creamos un nuevo empleado que c
+            //Creamos un nuevo empleado que clonaremos
             CEmpleado emp1 = new CEmpleado(100000, "Ventas");
             emp1.CalculaISR(0.00);
             emp1.MuestraInformacion();
 
             //Hacemos un clon
             CEmpleado emp3 = (CEmpleado)emp1.Clone();
+
 
             emp1.CalculaISR(0.00);
             emp1.MuestraInformacion();
