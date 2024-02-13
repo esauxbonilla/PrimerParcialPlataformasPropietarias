@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Programa01_02IEnumerable
 {
-    internal class CTiendaAutos : IEnumerable
+    internal class CTiendaAutos 
     {
         private CAuto[] disponibles;
 

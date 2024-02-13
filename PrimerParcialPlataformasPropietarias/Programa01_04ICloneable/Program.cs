@@ -24,7 +24,7 @@ namespace Programa01_04ICloneable
             Auto1.MuestraInformacion();
             Auto2.MuestraInformacion();
 
-            Console.WriteLine("--------------");
+            Console.WriteLine("-------1-------");
 
             //Hacemos un cambio, si fuera clon solo uno cambia
             Auto1.Costo = 60000;
@@ -33,14 +33,14 @@ namespace Programa01_04ICloneable
             Auto1.MuestraInformacion();
             Auto2.MuestraInformacion();
 
-            Console.WriteLine("--------------");
+            Console.WriteLine("-------2-------");
 
             //Ahora si hacemos un clon
             CAuto Auto3 = (CAuto)Auto1.Clone();
 
             Auto1.MuestraInformacion();
             Auto3.MuestraInformacion();
-            Console.WriteLine("--------------");
+            Console.WriteLine("-------3-------");
 
             //Modificamos uno, el otro no debe alterarse
             Auto1.Costo = 250000;
@@ -48,7 +48,7 @@ namespace Programa01_04ICloneable
             //Imprimimos para verificar
             Auto1.MuestraInformacion();
             Auto3.MuestraInformacion();
-            Console.WriteLine("--------------");
+            Console.WriteLine("-------4-------");
 
         }
     }
