@@ -37,7 +37,7 @@ namespace Parcial1PlataformasPropietarias
             Console.WriteLine("---------");
         }
 
-        //Implemetación de IComparable
+        //Implemetación de IComparable 
         int IComparable.CompareTo(object obj)
         {
             CEmpleadoMedioTiempo other = (CEmpleadoMedioTiempo)obj;
