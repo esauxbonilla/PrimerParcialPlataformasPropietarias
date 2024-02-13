@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Parcial1PlataformasPropietarias
 {
-    internal class CEmpleado : IEmpleados, ICloneable
+    internal class CEmpleado : IEmpleados, ICloneable, IComparable
     {
         double salario;
         double ISR;
@@ -23,12 +23,18 @@ namespace Parcial1PlataformasPropietarias
 
         public double Salario { get { return salario; } set { salario = value; } }
         public double Isr { get { return ISR; } set { ISR = value; } }
-        
+
         //Métodos interfaz
         public void CalculaISR(double pImpuesto)
         {
             //Calculamos impuesto
             ISR = salario * 0.16;
+        }
+
+        public override string ToString()
+        {
+            return string.Format("Trabajas en {0}\nTu salario es de {1}, con ISR de {2}\nTu salario total es de {3}\n---------",
+        departamento, salario, ISR, salario - ISR);
         }
 
         public void MuestraInformacion()
@@ -42,10 +48,22 @@ namespace Parcial1PlataformasPropietarias
 
         //Método para implementar el método a ICloneable
         public object Clone()
-        {   
+        {
             CEmpleado temp = new CEmpleado(salario, departamento);
             temp.Isr = ISR;
             return temp;
+        }
+
+        //Implemetación de IComparable
+        int IComparable.CompareTo(object obj)
+        {
+            CEmpleado other = (CEmpleado) obj;
+            if (this.salario > other.salario)
+                return 1;
+            else if (this.salario < other.salario)
+                return -1;
+            else
+                return 0;
         }
     }
 }

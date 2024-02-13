@@ -21,7 +21,8 @@ namespace Parcial1PlataformasPropietarias
                 miEmpleado.MuestraInformacion();
             }
 
-            CEmpleado emp1 = new CEmpleado(100000,"Ventas");
+            //Creamos un nuevo empleado que c
+            CEmpleado emp1 = new CEmpleado(100000, "Ventas");
             emp1.CalculaISR(0.00);
             emp1.MuestraInformacion();
 
@@ -42,6 +43,19 @@ namespace Parcial1PlataformasPropietarias
             emp1.MuestraInformacion();
             emp3.CalculaISR(0.00);
             emp3.MuestraInformacion();
+            Console.WriteLine("--------------");
+
+            // Comparar empleados y ordenarlos
+            CEmpleado[] empleados = new CEmpleado[] { emp1, emp3 };
+            Array.Sort(empleados);
+
+            // Mostrar información después de ordenar
+            foreach (CEmpleado empleadoOrdenado in empleados)
+            {
+                empleadoOrdenado.CalculaISR(0.00);
+                empleadoOrdenado.MuestraInformacion();
+            }
+
             Console.WriteLine("--------------");
         }
     }
