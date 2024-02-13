@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CEmpleado.cs" />
+    <Compile Include="CEmpleadoMedioTiempo.cs" />
     <Compile Include="CEmpresa.cs" />
     <Compile Include="IEmpleados.cs" />
     <Compile Include="Program.cs" />

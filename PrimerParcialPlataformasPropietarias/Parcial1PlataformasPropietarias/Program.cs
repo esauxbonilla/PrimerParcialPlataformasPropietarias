@@ -15,7 +15,7 @@ namespace Parcial1PlataformasPropietarias
 
             //Recorremos cada uno de los elementos 
 
-            foreach (CEmpleado miEmpleado in empresa)
+            foreach (IEmpleados miEmpleado in empresa)
             {
                 miEmpleado.CalculaISR(0.00);
                 miEmpleado.MuestraInformacion();
@@ -45,19 +45,7 @@ namespace Parcial1PlataformasPropietarias
             emp3.CalculaISR(0.00);
             emp3.MuestraInformacion();
             Console.WriteLine("--------------");
-
-            // Comparar empleados y ordenarlos
-            CEmpleado[] empleados = new CEmpleado[] { emp1, emp3 };
-            Array.Sort(empleados);
-
-            // Mostrar información después de ordenar
-            foreach (CEmpleado empleadoOrdenado in empleados)
-            {
-                empleadoOrdenado.CalculaISR(0.00);
-                empleadoOrdenado.MuestraInformacion();
-            }
-
-            Console.WriteLine("--------------");
+        
         }
     }
 }
